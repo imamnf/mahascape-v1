@@ -76,6 +76,7 @@ onBeforeMount(() => {
 <route lang="json">
 {
   "meta": {
+    "public": true,
     "layout": "AppLayout"
   }
 }

@@ -4,7 +4,9 @@ export function setupGuards(router: Router) {
   router.beforeEach((to, _from, next) => {
     const isLoggedIn = ref(localStorage.getItem('isLoggedIn'));
 
-    if (isLoggedIn.value === 'true' && to.path === '/sign-in') {
+    if (to.meta.public) {
+      next();
+    } else if (isLoggedIn.value === 'true' && to.path === '/sign-in') {
       router.back();
     } else if (isLoggedIn.value !== 'true' && to.path !== '/sign-in') {
       next({
