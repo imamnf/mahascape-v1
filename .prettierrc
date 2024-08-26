@@ -1,0 +1,15 @@
+{
+  "useTabs": false,
+  "tabWidth": 2,
+  "trailingComma": "none",
+  "semi": true,
+  "singleQuote": true,
+  "vueIndentScriptAndStyle": false,
+  "printWidth": 100,
+  "bracketSameLine": false,
+  "files": ["**/*.vue", "**/*.ts"],
+  "options": {
+    "semi": false,
+    "parser": "css"
+  }
+}
